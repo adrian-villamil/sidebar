@@ -10,17 +10,16 @@ body  {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: orange;
+    background-color: rgb(56, 56, 56);
 }
 
 .contenedor-sidebar a {
     text-decoration: none;
-    color: black;
+    color: white;
     display: block;
     padding: 10px;
 }
 
 .contenedor-sidebar a:hover {
-    background-color: black;
-    color: white;
+    background-image: linear-gradient(rgb(154, 209, 255), rgb(104, 159, 205), rgb(54, 109, 155));
 }
