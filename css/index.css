@@ -9,6 +9,8 @@ body  {
 }
 
 .contenedor {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     width: 50px;
@@ -29,9 +31,10 @@ body  {
 .contenedor a {
     text-decoration: none;
     color: white;
-    display: block;
-    padding: 10px 15px;
-    word-wrap: normal;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .contenedor a:hover {
@@ -39,10 +42,10 @@ body  {
 }
 
 .enlace-texto {
-    display: none;
+    visibility: hidden;
+    margin: 15px;
 }
 
 .enlace-texto-responsive {
-    display: inline;
-    margin: 15px;
+    visibility: visible;
 }
