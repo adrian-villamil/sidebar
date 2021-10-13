@@ -27,6 +27,51 @@ body  {
     width: 200px;
 }
 
+.menu-contenedor {
+    height: 50px;
+}
+
+.menu {
+    padding: 15px;
+    cursor: pointer;
+    float: right;
+}
+
+.barras {
+    width: 20px;
+    height: 3px;
+    background-color: rgb(163, 163, 163);
+    transition: 0.3s;
+}
+
+.barras:nth-child(2) {
+    margin: 5px 0;
+}
+
+.menu:hover .barras{
+    background-color: white;
+}
+
+.barras-cruz {
+    background-color: rgb(189, 68, 68);
+}
+
+.barras-cruz:nth-child(1) {
+    transform: translate(0, 8px) rotate(45deg);
+}
+
+.barras-cruz:nth-child(2) {
+    opacity: 0;
+}
+
+.barras-cruz:nth-child(3) {
+    transform: translate(0, -8px) rotate(-45deg);
+}
+
+.menu:hover .barras-cruz{
+    background-color: rgb(255, 70, 70);
+}
+
 .contenedor a {
     text-decoration: none;
     color: white;
