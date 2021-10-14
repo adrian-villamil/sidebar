@@ -82,6 +82,7 @@ body  {
 
 .contenedor a:hover {
     background-image: linear-gradient(rgb(154, 209, 255), rgb(104, 159, 205), rgb(54, 109, 155));
+    border-radius: 8px;
 }
 
 .icono {
