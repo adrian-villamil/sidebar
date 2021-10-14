@@ -32,20 +32,20 @@ body  {
 }
 
 .menu {
-    padding: 15px;
+    padding: 13px;
     cursor: pointer;
     float: right;
 }
 
 .barras {
-    width: 20px;
-    height: 3px;
+    width: 24px;
+    height: 2px;
     background-color: rgb(163, 163, 163);
     transition: 0.3s;
 }
 
 .barras:nth-child(2) {
-    margin: 5px 0;
+    margin: 9px 0;
 }
 
 .menu:hover .barras{
@@ -57,7 +57,7 @@ body  {
 }
 
 .barras-cruz:nth-child(1) {
-    transform: translate(0, 8px) rotate(45deg);
+    transform: translate(0, 11px) rotate(45deg);
 }
 
 .barras-cruz:nth-child(2) {
@@ -65,7 +65,7 @@ body  {
 }
 
 .barras-cruz:nth-child(3) {
-    transform: translate(0, -8px) rotate(-45deg);
+    transform: translate(0, -11px) rotate(-45deg);
 }
 
 .menu:hover .barras-cruz{
