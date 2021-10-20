@@ -20,7 +20,6 @@ body  {
     left: 0;
     background-color: rgb(56, 56, 56);
     transition: 0.3s;
-    overflow: hidden;
 }
 
 .contenedor-responsive {
@@ -86,12 +85,43 @@ body  {
 }
 
 .icono {
+    position: relative;
     width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+}
+
+.icono .tooltip {
+    position: absolute;
+    left: 130%;
+    z-index: 1;
+    width: 120px;
+    padding: 5px 0;
+    text-align: center;
+    background-color: rgb(56, 56, 56);
+    border-radius: 6px;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.icono .tooltip::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border: 5px solid transparent;
+    border-right-color: rgb(56, 56, 56);
+}
+
+.icono:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
 }
 
 i {
