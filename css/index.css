@@ -124,6 +124,11 @@ body  {
     opacity: 1;
 }
 
+.icono-tooltip-hidden:hover .tooltip {
+    visibility: hidden;
+    opacity: 0;
+}
+
 i {
     font-size: 1.3em;
 }
