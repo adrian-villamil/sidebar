@@ -156,10 +156,6 @@ i {
     display: block;
 }
 
-.dropdown-tooltip {
-    display: inline-block;
-}
-
 .dropdown-content a {
     display: block;
     color: white;
