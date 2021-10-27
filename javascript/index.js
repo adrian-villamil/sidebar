@@ -7,3 +7,7 @@ document.getElementsByClassName("menu-contenedor")[0].firstElementChild.addEvent
         item.classList.toggle("icono-tooltip-hidden");
     });
 });
+
+document.getElementsByClassName("dropdown-button")[0].addEventListener("click", () => {
+    document.getElementsByClassName("dropdown-content")[0].classList.toggle("dropdown-content-open");
+});
