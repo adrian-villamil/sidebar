@@ -71,17 +71,17 @@ body  {
     background-color: rgb(255, 70, 70);
 }
 
-.contenedor a {
+.contenedor .enlaces {
     text-decoration: none;
     color: white;
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-radius: 8px;
 }
 
-.contenedor a:hover {
+.contenedor .enlaces:hover {
     background-image: linear-gradient(rgb(154, 209, 255), rgb(104, 159, 205), rgb(54, 109, 155));
-    border-radius: 8px;
 }
 
 .icono {
@@ -135,4 +135,38 @@ i {
 
 .enlace-texto {
     margin-left: 6px;
+}
+
+.dropdown  {
+    display: inline-block;
+    position: relative;
+}
+
+.contenedor .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 112%;
+    z-index: 2;
+    background-color: rgb(56, 56, 56);
+    min-width: 160px;
+}
+
+.contenedor .dropdown .dropdown-content-open {
+    display: block;
+}
+
+.dropdown-tooltip {
+    display: inline-block;
+}
+
+.dropdown-content a {
+    display: block;
+    color: white;
+    padding: 16px 14px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-image: linear-gradient(rgb(154, 209, 255), rgb(104, 159, 205), rgb(54, 109, 155));
 }
