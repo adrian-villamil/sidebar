@@ -156,13 +156,25 @@ i {
     display: block;
 }
 
+.contenedor .dropdown .drop-cont-responsive {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
 .dropdown-content a {
     display: block;
     color: white;
-    padding: 16px 14px;
+    padding: 16px 0px 16px 30px;
     text-decoration: none;
 }
 
-.dropdown-content a:hover {
+.drop-cont-responsive a {
+    padding-left: 56px;
+    border-radius: 8px;
+}
+
+.dropdown-button-active, .dropdown-content a:hover {
     background-image: linear-gradient(rgb(154, 209, 255), rgb(104, 159, 205), rgb(54, 109, 155));
 }
