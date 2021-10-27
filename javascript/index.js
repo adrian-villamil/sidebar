@@ -6,8 +6,10 @@ document.getElementsByClassName("menu-contenedor")[0].firstElementChild.addEvent
     Array.from(document.getElementsByClassName("icono")).forEach((item) => {
         item.classList.toggle("icono-tooltip-hidden");
     });
+    document.getElementsByClassName("dropdown-content")[0].classList.toggle("drop-cont-responsive");
 });
 
 document.getElementsByClassName("dropdown-button")[0].addEventListener("click", () => {
+    document.getElementsByClassName("dropdown-button")[0].classList.toggle("dropdown-button-active");
     document.getElementsByClassName("dropdown-content")[0].classList.toggle("dropdown-content-open");
 });
