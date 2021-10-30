@@ -13,12 +13,11 @@ body  {
     flex-direction: column;
     margin: 0;
     padding: 0 6px;
-    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
+    bottom: 0;
     background-color: rgb(56, 56, 56);
-    transition: 0.3s;
 }
 
 .menu-contenedor {
@@ -66,69 +65,67 @@ body  {
     background-color: rgb(255, 70, 70);
 }
 
-.contenedor .row {
+.row {
     position: relative;
-    display: block;
-    border-radius: 8px;
 }
 
-.contenedor .row .enlaces {
+.enlaces {
+    position: relative;
     display: flex;
-    flex-direction: row;
+    width: fit-content;
     align-items: center;
     text-decoration: none;
     color: white;
-    max-width: 50px;
     border-radius: 8px;
-    overflow: hidden;
 }
 
-.contenedor .row .enlaces:hover {
+.enlaces:hover {
     background-image: linear-gradient(rgb(154, 209, 255), rgb(104, 159, 205), rgb(54, 109, 155));
 }
 
-.contenedor .row .enlaces .icono {
-    flex-shrink: 0;
+.icono {
     width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
+    flex-shrink: 0;
 }
 
-.contenedor .row .enlaces .icono i {
+.icono i {
     font-size: 1.3em;
 }
 
-.contenedor .row .enlaces .enlace-texto {
-    background-color: crimson;
+.enlace-texto {
+    width: 0px;
+    margin-left: 0px;
+    overflow: hidden;
+    transition: 0.3s;
 }
 
-.contenedor .row .tooltip {
-    position: absolute;
-    display: inline-block;
+.enlace-texto-open {
+    width: 120px;
+    margin-left: 20px;
+}
+
+.tooltip {
     visibility: hidden;
     opacity: 0;
-    top: 50%;
-    left: 150%;
+    display: inline-block;
+    position: absolute;
+    left: 100%;
+    margin-left: 40px;
     width: 120px;
     padding: 6px 0px;
-    transform: translate(0%, -50%);
-    z-index: 1;
     text-align: center;
     background-color: rgb(56, 56, 56);
     color: white;
     border-radius: 6px;
+    z-index: 1;
     transition: opacity 1s;
 }
 
-.contenedor .row:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-}
-
-.contenedor .row .tooltip::before {
+.tooltip::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -138,23 +135,48 @@ body  {
     border-right-color: rgb(56, 56, 56);
 }
 
+.enlaces:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.enlaces-tooltip-hidden:hover .tooltip {
+    visibility: hidden;
+    opacity: 0;
+}
+
 .dropdown-content {
     position: absolute;
     top: 0;
-    left: 56px;
-    display: flex;
-    flex-direction: column;
-    background-color: red;
+    left: 100%;
+    width: 0px;
+    margin-left: 6px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: rgb(56, 56, 56);
+    z-index: 2;
+    overflow: hidden;
+    transition: width 0.3s;
+}
+
+.dropdown-content-open {
+    width: 160px;
 }
 
 .dropdown-content a {
-    min-width: 160px;
+    display: block;
     padding: 16px 0px;
+    padding-left: 30px;
+    color: white;
     text-decoration: none;
     white-space: nowrap;
-    color: white;
 }
 
-.dropdown-content a:hover {
+.dropdown-button-active:hover .tooltip {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.dropdown-button-active ,.dropdown-content a:hover {
     background-image: linear-gradient(rgb(154, 209, 255), rgb(104, 159, 205), rgb(54, 109, 155));
 }
