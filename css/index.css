@@ -13,17 +13,12 @@ body  {
     flex-direction: column;
     margin: 0;
     padding: 0 6px;
-    width: 62px;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     background-color: rgb(56, 56, 56);
     transition: 0.3s;
-}
-
-.contenedor-responsive {
-    width: 200px;
 }
 
 .menu-contenedor {
@@ -71,110 +66,95 @@ body  {
     background-color: rgb(255, 70, 70);
 }
 
-.contenedor .enlaces {
-    text-decoration: none;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.contenedor .row {
+    position: relative;
+    display: block;
     border-radius: 8px;
 }
 
-.contenedor .enlaces:hover {
+.contenedor .row .enlaces {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    max-width: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.contenedor .row .enlaces:hover {
     background-image: linear-gradient(rgb(154, 209, 255), rgb(104, 159, 205), rgb(54, 109, 155));
 }
 
-.icono {
-    position: relative;
+.contenedor .row .enlaces .icono {
+    flex-shrink: 0;
     width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
+    border-radius: 8px;
 }
 
-.icono .tooltip {
+.contenedor .row .enlaces .icono i {
+    font-size: 1.3em;
+}
+
+.contenedor .row .enlaces .enlace-texto {
+    background-color: crimson;
+}
+
+.contenedor .row .tooltip {
     position: absolute;
-    left: 130%;
-    z-index: 1;
-    width: 120px;
-    padding: 5px 0;
-    text-align: center;
-    background-color: rgb(56, 56, 56);
-    border-radius: 6px;
-    color: white;
+    display: inline-block;
     visibility: hidden;
     opacity: 0;
+    top: 50%;
+    left: 150%;
+    width: 120px;
+    padding: 6px 0px;
+    transform: translate(0%, -50%);
+    z-index: 1;
+    text-align: center;
+    background-color: rgb(56, 56, 56);
+    color: white;
+    border-radius: 6px;
     transition: opacity 1s;
 }
 
-.icono .tooltip::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    margin-top: -5px;
-    border: 5px solid transparent;
-    border-right-color: rgb(56, 56, 56);
-}
-
-.icono:hover .tooltip {
+.contenedor .row:hover .tooltip {
     visibility: visible;
     opacity: 1;
 }
 
-.icono-tooltip-hidden:hover .tooltip {
-    visibility: hidden;
-    opacity: 0;
+.contenedor .row .tooltip::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translate(0%, -50%);
+    border: 8px solid transparent;
+    border-right-color: rgb(56, 56, 56);
 }
 
-i {
-    font-size: 1.3em;
-}
-
-.enlace-texto {
-    margin-left: 6px;
-}
-
-.dropdown  {
-    display: inline-block;
-    position: relative;
-}
-
-.contenedor .dropdown .dropdown-content {
-    display: none;
+.dropdown-content {
     position: absolute;
     top: 0;
-    left: 112%;
-    z-index: 2;
-    background-color: rgb(56, 56, 56);
-    min-width: 160px;
-}
-
-.contenedor .dropdown .dropdown-content-open {
-    display: block;
-}
-
-.contenedor .dropdown .drop-cont-responsive {
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    left: 56px;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
 }
 
 .dropdown-content a {
-    display: block;
-    color: white;
-    padding: 16px 0px 16px 30px;
+    min-width: 160px;
+    padding: 16px 0px;
     text-decoration: none;
+    white-space: nowrap;
+    color: white;
 }
 
-.drop-cont-responsive a {
-    padding-left: 56px;
-    border-radius: 8px;
-}
-
-.dropdown-button-active, .dropdown-content a:hover {
+.dropdown-content a:hover {
     background-image: linear-gradient(rgb(154, 209, 255), rgb(104, 159, 205), rgb(54, 109, 155));
 }
