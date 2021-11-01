@@ -177,6 +177,7 @@ body  {
     position: absolute;
     right: 10%;
     display: none;
+    font-weight: bold;
 }
 
 .dropdown-button-visible::after {
