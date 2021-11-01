@@ -8,6 +8,7 @@ document.getElementsByClassName("menu-contenedor")[0].firstElementChild.addEvent
     Array.from(document.getElementsByClassName("enlaces")).forEach((item) => {
         item.classList.toggle("enlaces-tooltip-hidden");
     });
+    document.getElementsByClassName("dropdown-button")[0].classList.toggle("dropdown-button-visible");
 });
 
 document.getElementsByClassName("dropdown-button")[0].addEventListener("click", () => {
