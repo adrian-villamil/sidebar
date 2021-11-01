@@ -172,6 +172,21 @@ body  {
     white-space: nowrap;
 }
 
+.dropdown-button::after {
+    content: '>';
+    position: absolute;
+    right: 10%;
+    display: none;
+}
+
+.dropdown-button-visible::after {
+    display: inline;
+}
+
+.dropdown-button-active::after {
+    content: '<';
+}
+
 .dropdown-button-active:hover .tooltip {
     visibility: hidden;
     opacity: 0;
